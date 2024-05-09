@@ -26,6 +26,7 @@ moisture value to a laptop using java and the display is used to show the state 
 5. Water pump and water intake: The point where water enters and is pumped.
 6. Batteries: It is responsible for powering the pump.
 7. The plant and soil container: The project subjects.
+
 PROCEDURE:
 I started by writing the base program from labs I have previously then adding the necessary parts to 
 achieve the project, getting the moisture, MOSFET, and button pins. After I have confirmed that the 
@@ -37,27 +38,34 @@ them is better than for-while loops. There are two timed tasks in my program, on
 and the other for activating the pump, while the shutdown task was called whenever the button was 
 pressed using the firmata4j addeventlistener method. All of these changes allowed for a more accurate 
 graph and stable system.
+
 TEST:
 I started by taking the values of the moisture sensor in different states, the values when it is put in a cup 
 of water, outside the cup of water, in dry soil, and in wet soil. After noting the values I get, I water the 
 soil to the necessary amount of water, took the value at that point and used as a threshold. After doing 
 all of that I would replicate the environment that will turn on and off the pump multiple times to confirm 
 that it is functioning properly.
+
 LEARNING OUTCOMES:
+
 CLO 1[Demonstrate the ability to test and debug a given program and reason about its
 correctness.]: With careful planning and multiple tests I have verify that the system is working, as visible 
 in the video. I have also looked at previous labs to at some of the libraries we used, which gave the idea 
 to timer task to solve the graphing problem I had with time.
+
 CLO 2[Given a problem specification and a suitable API, build an application that meets the given 
 requirement]: I used the Firmata4j library establish a connection to the board and initializing the 
 components I need, moisture sensor, OLED display, button, and MOSFETI. I have also used the Stdlib
 library to draw the moisture level vs time graph and plotting the points.
+
 CLO 3[Use ready-made collections to solve problems involving aggregations of typed data]: I used 
 HashMap to store the moisture value reading and corresponding time in secs since start.
+
 CLO 4[Build an event-driven application that controls sensors and actuators in order to connect events to 
 physical actions.]: I have used if-else statements to change the pump state by comparing the moisture 
 value to threshold I set. I have also used an event listener to shut down the system when the button is 
 pressed.
+
 CLO 5[Program common applications from a variety of engineering disciplines using an object-oriented 
 language and solve them on the compute]: I initially started the program in one class using for-while 
 loops, then changed to multiple classes each with their own function called using time schedule and 
