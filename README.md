@@ -17,7 +17,7 @@ the setvalue() method the system switched the MOSFET on and off, activating the 
 I used HashMap to store the moisture levels with the corresponding time in second since the start of the 
 program, then plotting the values on the graph, x values being the time in secs and y values being the
 moisture levels.
-COMPONENTS LIST: [as you built the device]
+COMPONENTS LIST:
 1. Arduino Board + OLED Display: The board is responsible for receiving commands and sending 
 moisture value to a laptop using java and the display is used to show the state of the system.
 2. MOSFET: It is responsible for powering the pump on and off.
